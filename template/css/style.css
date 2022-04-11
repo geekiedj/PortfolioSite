@@ -1,0 +1,698 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color: #b673cc;
+  --text-color:#c7c6c8e6;
+  --bg-color: black;
+  --big-font:3.6rem;
+  --h2-font:2.26rem;
+  --p-font: 1.1rem;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+  position: fixed;
+  width:100%;
+  right:0;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 111;
+  padding: 20px, 320px;
+  background: var(--bg-color);
+  box-shadow: rgba(204, 198, 198, 0.994) 0px 10px 10px -10px;
+}
+.logo{
+  background: linear-gradient(#3b0443,#ba3cf8,#b673cc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: transparent;
+}
+
+.navList{
+  display: flex;
+}
+.navList a{
+  color:var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 20px;
+  transition: color .4s;
+}
+.navList a:hover{
+  color: var(--main-color);
+}
+#menu-icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*********** Section *****************/
+
+section{
+  padding: 75px 16.7%;
+}
+.home{
+  width:100%;
+  min-height: 95vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text h1{
+  font-size: 4.6rem;
+  font-weight:800;
+  
+  line-height: 1.4;
+  margin-bottom: 30px;
+  margin-left: 34%;
+  background: linear-gradient(#140117,#ba3cf8,#b673cc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  color: transparent;
+}
+.home-text p{
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  margin-left: 120px;
+}
+.callbttn{
+  color: var(--text-color);
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: 2px solid #3b0443; 
+}
+
+.callbttn:hover{
+  transform: scale(1.2);
+  background: #3b0443;
+  transition: .4s;
+  box-shadow: 0 5px 15px 2px rgba(104, 100, 100, 0.974);
+}
+.callbttn i{
+  margin-right: 10px;
+}
+.unique{
+  color: var(--main-color)
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    margin-bottom : 20px;
+    margin-left: 30%;
+    
+}
+
+.media a{
+    /*font-size: 1.2rem;*/
+    color: var(--main-color);
+    margin-bottom : 20px;  
+}
+
+
+
+/********** About section *****************/
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 5rem;
+  align-items: center;
+  padding-top: 100px;
+}
+.about-img img{
+  max-width: 100%;
+  width: 530px;
+  height: auto;
+  border-radius: 30%;
+}
+span{
+  font-size: 1.5rem;
+  font-weight:600;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+/**.about-text h2{
+  font-size: var(--h2-font);
+  color: var(--text-color);
+  margin-bottom: 15px;
+}**/
+.about-text p{
+  max-width: 100%;
+  width:430px;
+  font-size: var(--p-font);
+  color:  var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 20px; 
+}
+/********** Service section *****************/
+.heading{
+  text-align: center;
+}
+.heading span{
+  font-size: var(--h2-font);
+}
+.service{
+  padding-top: 100px;
+}
+.service-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px,auto));
+  grid-gap:2rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.row{
+  padding:60px, 45px;
+  background: rgb(34, 34, 34);
+  border-radius: 10px;
+  cursor:pointer;
+  border-bottom: 2px solid transparent;
+  box-shadow: rgba(158, 155, 155, 0.994) 10px 10px 10px -5px;
+}
+.row i{
+  font-size: 3.2rem;
+  color: var(--main-color);
+  margin-bottom : 20px;
+}
+.row h3{
+  margin-bottom: 19px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #ba3cf8;
+}
+.row p{
+  font-size: 20px;
+  line-height: 40px;
+  color: var(--text-color);
+}
+.row :hover{
+  transform: scale(1.1);
+  border-bottom:2px solid #3b0443;
+  transition: 4s;
+}
+
+/********** Portfolio section *****************/
+.portfolio{
+  padding-top: 100px;
+}
+.portfolio-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, auto)) ;
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.box{
+  height: 500px;
+  width: auto;
+  border-radius: 10px;
+  transition: all 0.8s;
+  overflow: hidden;
+  box-shadow: rgba(204, 198, 198, 0.994) 0px 10px 10px -10px;
+  position: relative;
+  cursor: pointer;
+}
+.box-one{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-one:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.box-two{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-two:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.box-three{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-three:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.box-four{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-four:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.box-five{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-five:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.box-six{
+  background: linear-gradient(rgb(159, 76, 175), rgb(215, 189, 220)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) center center no-repeat;
+  background-size: 500px;
+}
+.box-six:hover{
+  background: linear-gradient(rgba(135, 94, 143, 0.7), rgb(188, 169, 192)), url(../C:\Users\HP\Portfolio\pexels-antonio-batinić-4164418.jpg) left center no-repeat;
+  background-size: 600px;
+}
+
+.inner{
+  position: absolute;
+  bottom: 45px;
+  left: 35px;
+}
+.inner h6{
+  color: #ba3cf8;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  margin: bottom 10px;
+}
+
+.inner h3{
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 600;
+  line-height:1.6;
+  margin-bottom: 10px;
+}
+
+.inner button{
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  color: var(--text-color);
+  padding: 7px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inner button:hover{
+  background: transparent;
+  border: 2px solid  #c6c9d8;
+  transition: .4s;
+}
+
+/********** Resume Section *****************/
+.resume{
+  background: var(--main-color);
+  width: 66.6%;
+  margin: 100px auto;
+  padding: 70px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-image: url("C:\Users\HP\Portfolio\Images\resumeImg.jpg");
+  background-size: cover;
+  box-shadow: rgba(204, 198, 198, 0.994) 0px 10px 10px -10px;
+}
+.resumetext p{
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.resumeclick{
+  background: var(--main-color);
+  color: var(--text-color);
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: 2px solid #3b0443;
+}
+.resumeclick:hover{
+  transform: scale(1.2);
+  background: #3b0443;
+  transition: .4s;
+  box-shadow: 0 5px 15px 2px rgba(104, 100, 100, 0.974);
+}
+
+
+/********** Blog Section *****************/
+
+/********** Call to Action Section *****************/
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/** .contact .content{
+  max-width: 800px;
+  text-align: center;
+}**/
+.contact .content h2{
+  font-size: 30px;
+  font-weight: 500;
+  color:var(--main-color);
+} 
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .contactInfo .boxyy .icon{
+  min-width: 5px;
+  height: 30px;
+  background: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.container .contactInfo .boxyy .text{
+  margin-left: 20px;
+  font-size: 16px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+.container .contactInfo .boxyy .text h3{
+  font-weight: 300;
+  color: var(--text-color);
+}
+.contactForm{
+  width:60%;
+  padding: 40px;
+  background: var(--main-color);
+  border-radius: 7px;
+}
+.contactForm h2{
+  font-size: 17px;
+  color: var(--text-color);
+  padding:15px;
+}
+.contactForm .inputBox{
+  position: relative;
+  width:100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border:2px solid #ba3cf8;
+  border-radius: 7px;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color:#ba3cf8;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color:#ba3cf8;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input[type=submit]{
+  width: 100%;
+  background: #3b0443;
+  color:var(--main-color);
+  border:2px solid #ba3cf8;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.contactForm .inputBox input[type=submit]:hover{
+  transform: scale(1.2);
+  transition: .4s;
+  box-shadow: 0 5px 15px 2px rgba(104, 100, 100, 0.974);
+}
+
+.social-icon2 a{
+ color: var(--main-color);
+}
+/**********Final Section *****************/
+.final{
+  font-size: 1rem;
+  text-align: center;
+}
+.different{
+  padding: 1px;
+ box-shadow: 0 5px 15px 2px rgba(104, 100, 100, 0.974);
+}
+.different:hover{
+  transform: scale(1.2);
+  transition: .4s;
+  box-shadow: 0 5px 15px 2px rgba(104, 100, 100, 0.974);
+}
+
+/*****Responsiveness*****/
+
+@media (max-width: 1500px) {
+  header{
+    padding: 15px 42px;
+  }
+  :root{
+    --big-font: 3rem;
+    --h2-font: 2rem;
+  }
+  .resume{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:60px 25px;
+  }
+  .resumetext{
+    margin-bottom: 10px;
+  }
+  .resumeclick{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1340px) {
+  section{
+    padding: 50px 5%;
+  }
+
+@media (max-width: 1060px) {
+  #menu-icon{
+    display: block;
+  }
+  header .navList{
+    position: absolute;
+    top: -400px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: black;
+    transition: .4s;
+  }
+  header .navList.active{
+    top: 86px;
+  }
+  .navList a{
+    display: block;
+    padding: 1.6rem;
+  }
+
+}
+@media (max-width: 950px) {
+  .home{
+    grid-template-columns: 1fr;
+    text-align:center;
+    margin-top: 80px;
+  }
+  .home-text p{
+    width:100%;
+    margin-left:20px;
+  }
+  .home h1{
+    margin-left: 20px;
+  }
+
+  .home-text .social-icon{
+   margin-left: 10px;
+  }
+
+  .home-text .media{
+    padding-top: 50px;
+    margin-left: 5%;
+  }
+  
+  .about{
+    grid-template-columns: 1fr;
+    text-align:center;
+  }
+  .about-img{
+    order: 2;
+  }
+  .about-text p{
+    width:100%;  
+  }
+
+
+}
+@media (max-width: 1700px) {
+  .box-one{
+    background-size: 550px;
+  }
+  .box-one:hover{
+    background-size: 700px;
+  }
+  
+  .box-two{
+    background-size: 550px;
+  }
+  .box-two:hover{
+    background-size: 700px;
+  }
+  
+  .box-three{
+    background-size: 550px;
+  }
+  .box-three:hover{
+    background-size: 700px;
+  }
+  
+  .box-four{
+    background-size: 550px;
+  }
+  .box-four:hover{
+    background-size: 700px;
+  }
+  .box-five{
+    background-size: 550px;
+  }
+  .box-five:hover{
+    background-size: 700px;
+  }
+  .box-six{
+    background-size: 550px;
+  }
+  .box-six:hover{
+    background-size: 700px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .box-one{
+    background-size: 850px;
+  }
+  .box-one:hover{
+    background-size: 700px;
+  }
+  
+  .box-two{
+    background-size: 850px;
+  }
+  .box-two:hover{
+    background-size: 700px;
+  }
+  
+  .box-three{
+    background-size: 850px;
+  }
+  .box-three:hover{
+    background-size: 700px;
+  }
+  
+  .box-four{
+    background-size: 850px;
+  }
+  .box-four:hover{
+    background-size: 700px;
+  }
+  .box-five{
+    background-size: 850px;
+  }
+  .box-five:hover{
+    background-size: 700px;
+  }
+  .box-six{
+    background-size: 850px;
+  }
+  .box-six:hover{
+    background-size: 700px;
+  }
+}
+/** Contact form responsiveness */
+@media (max-width: 950px) {
+  .contact{
+    padding: 50px;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .container .contactinfo{
+    margin-bottom: 40px;
+  }
+  .container .contactinfo{
+    width: 100%;
+  }
+}
+  
